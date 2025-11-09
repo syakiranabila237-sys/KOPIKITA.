@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - Kopi Kita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">☕ Kopi kita</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html" class="active">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Bikin Orderanmu</h1>
+            <p>Isi formulir dibawah ini untuk memesan minuman favoritmu</p>
+        </section>
+
+        <section class="form-section">
+            <form class="order-form" method="post" action="#">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap </label>
+                    <input type="text" id="name" name="name" placeholder="Ketik Nama Lengkap Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Alamat Email </label>
+                    <input type="email" id="email" name="email" placeholder="kamu.email@contoh.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon </label>
+                    <input type="tel" id="phone" name="phone" placeholder="(021) 123-4567" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Bikin Kata Sandi </label>
+                    <input type="password" id="password" name="password" placeholder="Minimal 6 Karakter" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Alamat Pengiriman </label>
+                    <textarea id="address" name="address" placeholder="Masukkan alamat rumah anda secara lengkap" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipe Order </label>
+                    <div>
+                        <label style="display: inline-block; margin-right: 20px;">
+                            <input type="radio" name="orderType" value="pickup" required> Ambil di Toko
+                        </label>
+                        <label style="display: inline-block;">
+                            <input type="radio" name="orderType" value="delivery" required> Antar Ke Rumah
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Pilih Minumanmu </label>
+                    <div>
+                        <label style="display: block; margin: 8px 0;">
+                            <input type="checkbox" name="drinks" value="espresso"> Espresso (Rp. 10.000)
+                        </label>
+                        <label style="display: block; margin: 8px 0;">
+                            <input type="checkbox" name="drinks" value="latte"> Latte (Rp. 80.000)
+                        </label>
+                        <label style="display: block; margin: 8px 0;">
+                            <input type="checkbox" name="drinks" value="cappuccino"> Cappuccino (Rp. 10.000)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Ukuran Minuman">Ukuran Minuman </label>
+                    <select id="Ukuran Minuman" name="Ukuran Minuman" required>
+                        <option value="">-- Pilih Ukuran --</option>
+                        <option value="kecil"> Kecil (200 ml)</option>
+                        <option value="sedang">Sedang (300 ml)</option>
+                        <option value="besar">Besar (400 ml)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: block;">
+                        <input type="checkbox" name="terms" required> Saya Setuju dengan syarat dan ketentuan 
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Buat Pesanan</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+   <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hubungi Kami</h4>
+                <p>Jalan A.Yani No.42 Pekanbaru</p>
+                <p>Phone: (021) 123-4567</p>
+                <p>Email: info@kopikita.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Jam Operasional</h4>
+                <p>Senin-Jum'at: 7.00 WIB - 20.00 WIB</p>
+                <p>Sabtu-Minggu: 8.00 WIB - 21.00 WIB</p>
+            </div>
+            <div class="footer-section">
+                <h4>IKuti Kami</h4>
+                <p>Instagram | Facebook | Twitter</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Kopi Kita. All rights reserved.</p>
+    </footer>
+</body>
+</html>

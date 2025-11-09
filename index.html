@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Kita - Toko Kopi Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* internal style
+    <style> /* Media Queries - Dibersihkan dan Dioptimasi */
+@media screen and (max-width: 600px) {
+    
+    nav {
+        flex-wrap: wrap;
+        padding: 0.5rem 1rem; 
+        position: relative;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .nav-toggle-label {
+        display: block; 
+        order: 3;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        order: 4; 
+        gap: 1rem;
+        margin-top: 1rem;
+        background-color: #6f4e37; 
+        padding: 1rem 0;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        display: flex; 
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+   
+    .hero {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    .features, .popular-items {
+        padding: 40px 1rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .items-container {
+        flex-direction: column;
+    }
+
+    .item-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .page-header {
+        padding: 50px 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        margin: 30px 0.5rem;
+        padding: 20px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    
+    td:nth-of-type(1):before { content: "Item / Year"; }
+    td:nth-of-type(2):before { content: "Description / Award"; }
+    td:nth-of-type(3):before { content: "Small / Category"; }
+    td:nth-of-type(4):before { content: "Medium"; }
+    td:nth-of-type(5):before { content: "Large"; }
+
+    .form-section {
+        padding: 30px 0.5rem;
+    }
+
+    .order-form {
+        padding: 25px 20px;
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    nav {
+        padding: 0.5rem 3%;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .nav-toggle-label {
+        display: none; 
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .features, .popular-items {
+        padding: 60px 3%;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .page-header {
+        padding: 70px 3%;
+    }
+
+    .content-section {
+        margin: 40px 3%;
+        padding: 35px;
+    }
+
+    table {
+        display: table;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tbody {
+        display: table-row-group;
+    }
+
+    tr {
+        display: table-row;
+    }
+
+    td, th {
+        display: table-cell;
+    }
+
+    td:before {
+        content: none;
+    }
+
+    .form-section {
+        padding: 40px 3%;
+    }
+
+    .order-form {
+        padding: 35px;
+        max-width: 650px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        gap: 25px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    nav {
+        padding: 0.5rem 5%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        display: flex !important;
+        gap: 30px;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .features, .popular-items {
+        padding: 60px 5%;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .items-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .page-header {
+        padding: 80px 5%;
+    }
+
+    .content-section {
+        margin: 50px auto;
+        padding: 40px;
+        max-width: 1200px;
+    }
+
+    .form-section {
+        padding: 40px 5%;
+    }
+
+    .order-form {
+        padding: 40px;
+        max-width: 700px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 600px) {
+   
+    nav {
+        flex-wrap: wrap;
+        padding: 0.5rem 1rem;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .nav-toggle-label {
+        display: block; 
+        order: 3; 
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        order: 4;
+        gap: 1rem;
+        margin-top: 1rem;
+        background-color: #6f4e37; 
+        padding: 1rem 0;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        display: flex; 
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+  
+    .hero {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    .features, .popular-items {
+        padding: 40px 1rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .items-container {
+        flex-direction: column;
+    }
+
+    .item-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .page-header {
+        padding: 50px 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        margin: 30px 0.5rem;
+        padding: 20px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+    }
+
+    td {
+        border: none;
+        position: relative;
+         padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    
+    td:nth-of-type(1):before { content: "Item / Year"; }
+    td:nth-of-type(2):before { content: "Description / Award"; }
+    td:nth-of-type(3):before { content: "Small / Category"; }
+    td:nth-of-type(4):before { content: "Medium"; }
+    td:nth-of-type(5):before { content: "Large"; }
+
+    .form-section {
+        padding: 30px 0.5rem;
+    }
+
+    .order-form {
+        padding: 25px 20px;
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    nav {
+        padding: 0.5rem 3%;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .nav-toggle-label {
+        display: none; 
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .features, .popular-items {
+        padding: 60px 3%;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .page-header {
+        padding: 70px 3%;
+    }
+
+    .content-section {
+        margin: 40px 3%;
+        padding: 35px;
+    }
+
+    table {
+        display: table;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tbody {
+        display: table-row-group;
+    }
+
+    tr {
+        display: table-row;
+    }
+
+    td, th {
+        display: table-cell;
+    }
+
+    td:before {
+        content: none;
+    }
+
+    .form-section {
+        padding: 40px 3%;
+    }
+
+    .order-form {
+        padding: 35px;
+        max-width: 650px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        gap: 25px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    nav {
+        padding: 0.5rem 5%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        display: flex !important;
+        gap: 30px;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .features, .popular-items {
+        padding: 60px 5%;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .items-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .page-header {
+        padding: 80px 5%;
+    }
+
+    .content-section {
+        margin: 50px auto;
+        padding: 40px;
+        max-width: 1200px;
+    }
+
+    .form-section {
+        padding: 40px 5%;
+    }
+
+    .order-form {
+        padding: 40px;
+        max-width: 700px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+</style>
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">☕ Kopi Kita</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Selamat Datang Di Kopi Kita</h1>
+                <p>Kopi Yang Sesungguhnya Menanti!</p>
+                <a href="menu.html" class="cta-button">Klik Untuk Melihat Menu Kami </a>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Kenapa Harus Memilih Kopi Kita?</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>🌟 Kualitas Sempurna</h3>
+                    <p>Biji Kopi Pilihan Yang Terbaik Di Seluruh Dunia.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>👨‍🍳 Barista Yang Berpengalaman</h3>
+                    <p>Barista Kami Yang Berpengalaman Untuk Menciptakan Setiap Cangkir Kopi Yang Sempurna Dan Presisi.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>🏠 Tempat Yang Nyaman</h3>
+                    <p>Cocok Untuk Bekerja, Berkumpul Bersama Teman Ataupun Keluarga.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="popular-items">
+            <h2>Pilihan Favorit Pelanggan</h2>
+            <div class="items-container">
+                <div class="item-card">
+                    <h3>Karamel Macchiato</h3>
+                    <p>Espresso yang kaya dengan vanilla dan karamel</p>
+                    <span class="price">Rp. 20.000,00</span>
+                </div>
+                <div class="item-card">
+                    <h3>Cappucino Klasik</h3>
+                    <p>Keseimbangan sempurna antara espresso dan foam</p>
+                    <span class="price">Rp. 25.000,00</span>
+                </div>
+                <div class="item-card">
+                    <h3>Croissant Coklat</h3>
+                    <p>Kue kering dengan coklat hitam</p>
+                    <span class="price">Rp. 10.000,00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hubungi Kami</h4>
+                <p>Jalan A.Yani No.42 Pekanbaru</p>
+                <p>Phone: (021) 123-4567</p>
+                <p>Email: info@kopikita.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Jam Operasional</h4>
+                <p>Senin-Jum'at: 7.00 WIB - 20.00 WIB</p>
+                <p>Sabtu-Minggu: 8.00 WIB - 21.00 WIB</p>
+            </div>
+            <div class="footer-section">
+                <h4>IKuti Kami</h4>
+                <p>Instagram | Facebook | Twitter</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Kopi Kita. All rights reserved.</p>
+    </footer>
+</body>
+</html>

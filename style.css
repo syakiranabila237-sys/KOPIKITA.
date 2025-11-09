@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #CBB89D;
+    background-image: linear-gradient(to bottom, #CBB89D, #BFAE97);
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #8B2F4D;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: #E7D8C2;
+}
+
+.nav-links a.active {
+    color: #E7D8C2;
+    border-bottom: 2px solid #E7D8C2;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #8B2F4D;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #732741;
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 80px - 200px);
+}
+
+/* Features Section */
+.features {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #8B2F4D;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #8B2F4D;
+}
+
+/* Popular Items */
+.popular-items {
+    padding: 60px 5%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.popular-items h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #8B2F4D;
+}
+
+.items-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.item-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    text-align: center;
+}
+
+.item-card h3 {
+    color: #8B2F4D;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    font-size: 1.3em;
+    color: #B2764E;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.page-header {
+    background: linear-gradient(135deg, #8B2F4D 0%, #CBB89D 100%);
+    color: white;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.2em;
+    color: #E7D8C2;
+}
+
+.content-section {
+    margin: 50px 5%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    font-size: 2.2em;
+    color: #8B2F4D;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #8B2F4D;
+    padding-bottom: 10px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #8B2F4D;
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Form Styles */
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 5%;
+}
+
+.order-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #8B2F4D;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #8B2F4D;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #8B2F4D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #732741;
+}
+
+footer {
+    background-color: #8B2F4D;
+    color: white;
+    padding: 40px 5%;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    color: #E7D8C2;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    text-align: center;
+    color: #E7D8C2;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #BFAE97;
+}
+
+ul {
+    line-height: 2;
+}
+
+li {
+    margin: 10px 0;
+}
